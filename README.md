@@ -79,9 +79,9 @@ python manage.py migrate
 ## Создание суперпользователя
 
 ```bash
-python manage.py createsuperuser
-```
 
+```
+python manage.py createsuperuser
 ## Запуск проекта
 
 ```bash
@@ -101,3 +101,4 @@ http://127.0.0.1:8000/
 * HTML5
 * CSS3
 * SQLite
+* 
