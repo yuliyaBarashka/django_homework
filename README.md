@@ -17,21 +17,44 @@
 
 ```text
 myshop/
-├── catalog/
-│   ├── migrations/
-│   ├── static/
-│   ├── templates/
-│   ├── admin.py
-│   ├── apps.py
-│   ├── models.py
-│   ├── urls.py
-│   └── views.py
+│
 ├── config/
-│   ├── settings.py
-│   ├── urls.py
-│   ├── asgi.py
-│   └── wsgi.py
+│ ├── __init__.py
+│ ├── settings.py
+│ ├── urls.py
+│ ├── asgi.py
+│ └── wsgi.py
+│
+├── catalog/
+│ ├── migrations/
+│ ├── fixtures/
+│ │ ├── categories.json
+│ │ └── products.json
+│ │
+│ ├── management/
+│ │ └── commands/
+│ │ └── load_data.py
+│ │
+│ ├── templates/
+│ │ └── catalog/
+│ │ ├── home.html
+│ │ └── contacts.html
+│ │
+│ ├── static/
+│ ├── admin.py
+│ ├── apps.py
+│ ├── models.py
+│ ├── tests.py
+│ ├── urls.py
+│ └── views.py
+│
+├── media/
+├── screenshots/
+├── .env
+├── .env.sample
+├── .gitignore
 ├── manage.py
+├── README.md
 └── requirements.txt
 ```
 
@@ -49,6 +72,8 @@ cd myshop
 ```bash
 python -m venv venv
 ```
+
+macOS
 
 Активируйте виртуальное окружение:
 
@@ -73,19 +98,19 @@ pip install -r requirements.txt
 ## Применение миграций
 
 ```bash
-python manage.py migrate
+python3 manage.py migrate
 ```
 
 ## Создание суперпользователя
 
 ```bash
-
+python3 manage.py createsuperuser
 ```
-python manage.py createsuperuser
+
 ## Запуск проекта
 
 ```bash
-python manage.py runserver
+python3 manage.py runserver
 ```
 
 После запуска приложение будет доступно по адресу:
